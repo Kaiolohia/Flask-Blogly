@@ -1,0 +1,64 @@
+div {
+  padding-bottom: 5px;
+}
+body {
+  background-color: rgb(51, 55, 61);
+}
+input {
+  background-color: transparent;
+  color: white;
+  transition: all 0.5s;
+}
+input:hover {
+  background-color: rgba(255, 255, 255, 10%);
+}
+
+label {
+  color: white;
+}
+label:hover {
+  text-shadow: 0px 0px 5px white;
+}
+
+button {
+  background-color: rgb(48, 199, 48);
+  color: black;
+  border-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: rgb(188, 255, 175);
+}
+
+h1 {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+h2 {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+p, li, a {
+  color: white;
+  text-shadow: 0px 0px 5px rgb(146, 146, 146);
+  font-size: large;
+  transition: all 0.5s;
+}
+
+a:hover {
+  color: lightseagreen
+}
+
+.red {
+  background-color: red;
+}
+
+.icon {
+  max-height: 150px;
+}
+
+.padded-lr {
+  margin-left: 5px;
+}

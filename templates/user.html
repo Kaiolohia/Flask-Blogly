@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block title %} Home Page {% endblock %} 
+{% block content%}
+<div>
+    {% if user.image_url %}
+    <img src="{{user.image_url}}" class="icon padded-lr" style="float: left;">
+    {% endif %}
+    <h1 style="display: inline-block;" class="padded-lr">{{user.first_name}} {{user.last_name}} </h1>
+    <form action="/users/{{user.id}}/edit" style="float:center;" >
+        <button class="padded-lr">Edit user</button>
+    </form>
+    <form action="/users/{{user.id}}/delete" style="float:center;" >
+        <button class = 'red padded-lr' style="margin-top: 5px;">Delete user</button>
+    </form>
+    <form action="/" style="float:center;" >
+        <button class = 'padded-lr' style="margin-top: 5px;">Go Home</button>
+    </form>
+</div>    
+{% endblock%}
