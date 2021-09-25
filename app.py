@@ -1,6 +1,5 @@
 """Blogly application."""
 
-import re
 from flask import Flask, render_template, redirect, request, flash
 from sqlalchemy.orm import session
 from models import db, connect_db, User
