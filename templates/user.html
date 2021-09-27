@@ -6,6 +6,18 @@
     <img src="{{user.image_url}}" class="icon padded-lr" style="float: left;">
     {% endif %}
     <h1 style="display: inline-block;" class="padded-lr">{{user.first_name}} {{user.last_name}} </h1>
+
+    <hr>
+    <h2>
+        Posts:
+    </h2>
+    <ul>
+        {% for post in users_posts %}
+        <li>
+            <a href="/posts/{{post.id}}">{{post.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
     <form action="/users/{{user.id}}/edit" style="float:center;" >
         <button class="padded-lr">Edit user</button>
     </form>
