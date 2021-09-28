@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+{% block title %} Tag {% endblock %} 
+{% block content%}
+<h1>{{tag.name}}</h1>
+
+
+<form action="/tags/{{tag.id}}/edit">
+    <button style="margin-top: 5px;">Edit tag</button>
+</form>
+<form action="/tags/{{tag.id}}/delete">
+    <button class="red" style="margin-top: 5px;">Delete tag</button>
+</form>
+<form action="/">
+    <button style="margin-top: 5px;">Go home</button>
+</form>
+
+{% endblock%}

@@ -1,5 +1,5 @@
 {% extends "base.html" %} 
-{% block title %} Home Page {% endblock %} 
+{% block title %} User {% endblock %} 
 {% block content%}
 <div>
     {% if user.image_url %}
@@ -18,8 +18,11 @@
         </li>
         {% endfor %}
     </ul>
+    <form action="/users/{{user.id}}/posts/new" style="float:center;" >
+        <button class = 'padded-lr' style="margin-top: 5px;">New post</button>
+    </form>
     <form action="/users/{{user.id}}/edit" style="float:center;" >
-        <button class="padded-lr">Edit user</button>
+        <button class="padded-lr" style="margin-top: 5px;">Edit user</button>
     </form>
     <form action="/users/{{user.id}}/delete" style="float:center;" >
         <button class = 'red padded-lr' style="margin-top: 5px;">Delete user</button>
@@ -27,5 +30,6 @@
     <form action="/" style="float:center;" >
         <button class = 'padded-lr' style="margin-top: 5px;">Go Home</button>
     </form>
+    
 </div>    
 {% endblock%}

@@ -7,15 +7,22 @@
 <div>
     <p>By {{post.user.first_name}} {{post.user.last_name}}</p>
 </div>
+{% if post.tags %}
+<div class="row">
+<p>Tags: </p> {% for tag in post.tags%} <a href="/tags/{{tag.id}}" class="tag">{{tag.name}}</a> {% endfor %}
+</div>
+{% endif%}
+<div class="row">
+    <form action="/posts/{{post.id}}/edit">
+        <button>Edit post</button>
+    </form>
+    <form action="/posts/{{post.id}}/delete">
+        <button class="red">Delete post</button>
+    </form>
+    <form action="/">
+        <button>Go home</button>
+    </form>
+</div>
 
-<form action="/posts/{{post.id}}/edit">
-    <button style="margin-top: 5px;">Edit post</button>
-</form>
-<form action="/posts/{{post.id}}/delete">
-    <button class="red" style="margin-top: 5px;">Delete post</button>
-</form>
-<form action="/">
-    <button style="margin-top: 5px;">Go home</button>
-</form>
 
 {% endblock%}

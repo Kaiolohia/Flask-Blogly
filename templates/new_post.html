@@ -11,6 +11,17 @@
         <textarea rows="3" cols="25" name="content"></textarea>
     </div>
     </div>
+    {% if tags %}
+    <div> 
+        <h2>Tags:</h2>
+        <div>
+            {% for tag in tags %}
+            <label>{{tag.name}}</label>
+            <input type="checkbox" name="tags" value="{{tag.id}}" id="{{tag.id}}">
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
     <button>Create post</button>
 </form>
 

@@ -9,7 +9,10 @@
     <li><a href="/users/{{user.id}}">{{user.first_name}} {{user.last_name}} </a></li>
     {% endfor %}
 </ul>
+<form action="/tags">
+    <button>Tags</button>
+</form>
 <form action="/users/new">
-    <button>Create new user</button>
+    <button style="margin-top: 5px;">Create new user</button>
 </form>
 {% endblock%}

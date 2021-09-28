@@ -12,6 +12,21 @@
             <textarea rows="3" cols="25" name="content">{{post.content}}</textarea>
         </div>
         </div>
+        {% if tags %}
+        <div> 
+            <h2>Tags:</h2>
+            <div>
+                {% for tag in tags %}
+                <label>{{tag.name}}</label>
+                <input type="checkbox" {% if tag in post.tags %} checked {% endif %}
+                name="tags" value="{{tag.id}}" id="{{tag.id}}">
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
     <button>Update post</button>
+</form>
+<form action="/posts/{{post.id}}">
+    <button>Go back</button>
 </form>
 {% endblock%}
